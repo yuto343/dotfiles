@@ -9,10 +9,7 @@ fi
 # Plugin settings
 # ================================================================
 # custom-theme
-
-export LANG=""
-export ZPLUG_HOME=/opt/homebrew/opt/zplug
-source $ZPLUG_HOME/init.zsh
+source $(brew --prefix)/opt/zplug/init.zsh
 
 # syntax-highlight
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
