@@ -1,0 +1,215 @@
+// Place your key bindings in this file to override the defaults
+[
+  //
+  //EDITOR
+  //
+  {
+    "key": "cmd+t",
+    "command": "-workbench.action.showAllSymbols"
+  },
+  {
+    "key": "cmd+t",
+    "command": "workbench.action.splitEditor",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+l",
+    "command": "workbench.action.focusNextGroup",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+h",
+    "command": "workbench.action.focusPreviousGroup",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+shift+h",
+    "command": "workbench.action.previousEditor",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+shift+l",
+    "command": "workbench.action.nextEditor",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+shift+j",
+    "command": "workbench.action.terminal.focus",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+shift+ctrl+h",
+    "command": "workbench.action.focusSideBar",
+    "when": "editorTextFocus || terminalFocus"
+  },
+  {
+    "key": "shift+cmd+w",
+    "command": "workbench.action.closeAllEditors"
+  },
+  {
+    "key": "cmd+d",
+    "command": "editor.action.revealDefinition",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+k cmd+i",
+    "command": "editor.action.showHover",
+    "when": "editorTextFocus"
+  },
+
+  //
+  // TERMINAL
+  //
+  {
+    "key": "cmd+t",
+    "command": "workbench.action.terminal.split",
+    "when": "terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "cmd+w",
+    "command": "workbench.action.terminal.kill",
+    "when": "terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "cmd+;",
+    "command": "terminal.focus",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+;",
+    "command": "workbench.action.terminal.toggleTerminal",
+    "when": "terminal.active"
+  },
+  {
+    "key": "cmd+;",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "cmd+shift+h",
+    "command": "workbench.action.terminal.focusPreviousPane",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "cmd+shift+k",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "cmd+shift+l",
+    "command": "workbench.action.terminal.focusNextPane",
+    "when": "terminalFocus"
+  },
+  //
+  // SIDEBAR
+  //
+  {
+    "key": "cmd+shift+l",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "sideBarFocus"
+  },
+  //
+  // EXPLORER
+  //
+  {
+    "key": "cmd+e",
+    "command": "workbench.view.explorer",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+n",
+    "command": "explorer.newFile",
+    "when": "explorerViewletVisible && filesExplorerFocus"
+  },
+  {
+    "key": "cmd+shift+n",
+    "command": "explorer.newFolder",
+    "when": "explorerViewletVisible && filesExplorerFocus"
+  },
+  //
+  // SEARCH
+  //
+  // panelの移動
+  {
+    "key": "shift+cmd+f",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "searchViewletFocus"
+  },
+  // input => resultへの移動
+  {
+    "key": "cmd+enter",
+    "command": "search.action.focusSearchList",
+    "when": "hasSearchResult && searchViewletVisible"
+  },
+  //
+  // SOURCE CONTROl
+  //
+  // サイドバーのgitボタンクリックの動作
+  {
+    "key": "shift+cmd+g",
+    "command": "workbench.view.scm"
+  },
+  // diffviewを開く&選択
+  {
+    "key": "space",
+    "command": "list.selectAndPreserveFocus",
+    "when": "sideBarFocus && activeViewlet == 'workbench.view.scm'"
+  },
+  // staging / unstaging
+  {
+    "key": "u",
+    "command": "git.stage",
+    "when": "sideBarFocus && activeViewlet == 'workbench.view.scm'"
+  },
+  {
+    "key": "shift+u",
+    "command": "git.unstage",
+    "when": "sideBarFocus && activeViewlet == 'workbench.view.scm'"
+  },
+  // commit
+  {
+    "key": "shift+c",
+    "command": "git.commitStaged",
+    "when": "sideBarFocus && activeViewlet == 'workbench.view.scm'"
+  },
+  // push
+  {
+    "key": "shift+p",
+    "command": "git.push",
+    "when": "sideBarFocus && activeViewlet == 'workbench.view.scm'"
+  },
+
+  {
+    "key": "cmd+k cmd+w",
+    "command": "-workbench.action.closeAllEditors"
+  },
+  // {
+  //   "key": "cmd+shift+j",
+  //   "command": "workbench.scm.action.focusNextResourceGroup",
+  //   "when": "sideBarFocus && activeViewlet == 'workbench.view.scm'"
+  // },
+  {
+    "key": "cmd+shift+j",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "workbench.scm.action.focusNextResourceGroup",
+        { "command": "workbench.action.acceptSelectedQuickOpenItem" }
+      ]
+    },
+    "when": "sideBarFocus && activeViewlet == 'workbench.view.scm'"
+  },
+  {
+    "key": "cmd+shift+k",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": ["list.focusFirst", "list.select"]
+    },
+    "when": "listFocus && workbench.scm.active"
+  },
+  // other
+  {
+    "key": "shift+cmd+w",
+    "command": "-workbench.action.closeWindow"
+  }
+]
